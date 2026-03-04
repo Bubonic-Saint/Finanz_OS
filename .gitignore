@@ -2,6 +2,16 @@
 __pycache__/
 *.py[codz]
 *$py.class
+.venv/
+.idea/
+
+# Data
+data/*.csv
+data/*.xlsx
+Finanzen_Template.xlsm
+
+.env
+
 
 # C extensions
 *.so

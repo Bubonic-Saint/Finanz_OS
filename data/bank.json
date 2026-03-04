@@ -1,0 +1,16 @@
+
+{
+    "Sparkasse":{
+      "first-column": "Auftragskonto",
+      "sep": ";",
+      "encoding": "utf-8",
+      "starting-row": 0
+    },
+
+      "ING":{
+      "first-column": "Buchung",
+      "sep": ";",
+      "encoding": "utf-8",
+      "starting-row": 13
+  }
+}
