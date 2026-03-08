@@ -1,0 +1,24 @@
+{
+    "ING": {
+        "first-column": "Buchung;",
+        "sep": ";",
+        "encoding": "latin1",
+        "mapping": {
+            "Buchung": "Datum",
+            "Betrag": "Betrag",
+            "Auftraggeber/Empfänger": "Empfänger",
+            "Verwendungszweck": "Details"
+        }
+    },
+    "Sparkasse": {
+        "first-column": "Auftragskonto",
+        "sep": ";",
+        "encoding": "latin1",
+        "mapping": {
+            "Buchungstag": "Datum",
+            "Betrag": "Betrag",
+            "Beguenstigter/Zahlungspflichtiger": "Empfänger",
+            "Verwendungszweck": "Details"
+        }
+    }
+}

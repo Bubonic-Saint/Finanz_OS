@@ -1,0 +1,28 @@
+{
+    "rules": [
+        {
+            "keyword": "NETFLIX",
+            "type": "Ausgabe",
+            "category": "Freizeit",
+            "subcategory": "Streaming"
+        },
+        {
+            "keyword": "Amazon",
+            "type": "Variablekosten",
+            "category": "Var 3",
+            "subcategory": ""
+        },
+        {
+            "keyword": "GEHALT",
+            "type": "Einnahme",
+            "category": "Einkommen",
+            "subcategory": "Gehalt"
+        },
+        {
+            "keyword": "REWE",
+            "type": "Ausgabe",
+            "category": "Lebensmittel",
+            "subcategory": "Supermarkt"
+        }
+    ]
+}
