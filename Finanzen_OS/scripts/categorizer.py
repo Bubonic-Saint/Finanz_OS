@@ -36,11 +36,22 @@ def run_categorization(input_path, output_path, archive_path, template_path):
     df['Schlagwort'] = ""
 
     # 4. Schlagwort-Suche (Details UND Empfänger prüfen)
+    # Innerhalb der Regelschleife:
     for rule in rules:
         keyword = rule['keyword']
+        direction = rule.get('direction')
+
+        # Text-Match
         mask = (df['Details'].str.contains(keyword, case=False, na=False)) | \
                (df['Empfänger'].str.contains(keyword, case=False, na=False))
 
+        # Richtungs-Match (Zusatzfilter)
+        if direction == "plus":
+            mask = mask & (df['Betrag'] > 0)
+        elif direction == "minus":
+            mask = mask & (df['Betrag'] < 0)
+
+        # Nur wenn beide Bedingungen erfüllt sind, wird kategorisiert
         if mask.any():
             df.loc[mask, 'Type'] = rule['type']
             df.loc[mask, 'Kategorie'] = rule['category']

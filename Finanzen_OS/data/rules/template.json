@@ -1,28 +1,60 @@
 {
     "rules": [
         {
-            "keyword": "NETFLIX",
-            "type": "Ausgabe",
-            "category": "Freizeit",
-            "subcategory": "Streaming"
+            "keyword": "Duale Hochschule",
+            "type": "Fixkosten",
+            "category": "Fix 1",
+            "subcategory": "",
+            "direction": "minus"
+        },
+        {
+            "keyword": "AMAZON",
+            "type": "Einkommen",
+            "category": "Ein 1",
+            "subcategory": "",
+            "direction": "plus"
+        },
+        {
+            "keyword": "Bargeldauszahlung",
+            "type": "IGNORE",
+            "category": "IGNORE",
+            "subcategory": "",
+            "direction": "minus"
         },
         {
             "keyword": "Amazon",
             "type": "Variablekosten",
+            "category": "Var 1",
+            "subcategory": "",
+            "direction": "minus"
+        },
+        {
+            "keyword": "Netto",
+            "type": "Variablekosten",
             "category": "Var 3",
-            "subcategory": ""
+            "subcategory": "",
+            "direction": "minus"
         },
         {
-            "keyword": "GEHALT",
-            "type": "Einnahme",
-            "category": "Einkommen",
-            "subcategory": "Gehalt"
+            "keyword": "AMZN",
+            "type": "Einkommen",
+            "category": "Ein 2",
+            "subcategory": "Ebay",
+            "direction": "plus"
         },
         {
-            "keyword": "REWE",
-            "type": "Ausgabe",
-            "category": "Lebensmittel",
-            "subcategory": "Supermarkt"
+            "keyword": "Accenture",
+            "type": "Einkommen",
+            "category": "Ein 1",
+            "subcategory": "",
+            "direction": "plus"
+        },
+        {
+            "keyword": "Paypal",
+            "type": "Variablekosten",
+            "category": "Var 3",
+            "subcategory": "Warhammer",
+            "direction": "minus"
         }
     ]
 }

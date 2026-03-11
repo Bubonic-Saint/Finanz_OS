@@ -3,39 +3,43 @@ import sys
 import os
 
 
-def add_rule(keyword, t_type, cat, sub_cat):
+def update_templates(raw_data):
     path = r"C:\Users\kevin\Git\Finanzen_OS\data\rules\template.json"
 
-    # 1. Bestehende Regeln laden
     if os.path.exists(path):
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-        except:
-            data = {"rules": []}
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
     else:
         data = {"rules": []}
 
-    # 2. Neue Regel vorbereiten
-    new_rule = {
-        "keyword": keyword,
-        "type": t_type,
-        "category": cat,
-        "subcategory": sub_cat
-    }
+    # Trenne die verschiedenen Regeln
+    entries = raw_data.split("###")
 
-    # 3. Dubletten entfernen (falls Keyword schon existiert)
-    data["rules"] = [r for r in data["rules"] if r["keyword"].lower() != keyword.lower()]
+    for entry in entries:
+        fields = entry.split("|")
+        if len(fields) < 5: continue
 
-    # 4. Neue Regel hinzufügen
-    data["rules"].append(new_rule)
+        keyword, t_type, cat, sub_cat, direction = fields
 
-    # 5. Sauber speichern
+        new_rule = {
+            "keyword": keyword,
+            "type": t_type,
+            "category": cat,
+            "subcategory": sub_cat,
+            "direction": direction
+        }
+
+        # Dubletten-Check: Keyword UND Richtung müssen identisch sein zum Ersetzen
+        data["rules"] = [r for r in data["rules"] if not (
+                r["keyword"].lower() == keyword.lower() and
+                r.get("direction") == direction
+        )]
+        data["rules"].append(new_rule)
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
-    # sys.argv[1-4] sind die Argumente von VBA
-    if len(sys.argv) > 4:
-        add_rule(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    if len(sys.argv) > 1:
+        update_templates(sys.argv[1])
