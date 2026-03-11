@@ -95,11 +95,5 @@ pip install -r requirements.txt
 ### 3. Excel-Datei vorbereiten
 - Öffne `Finanzen_Template.xlsm` in Excel.
 - Aktiviere Makros, wenn du dazu aufgefordert wirst.
-- Drücke ALT + F11, um den VBA-Editor zu öffnen.
-- Suche das Modul PythonRun.
-- Stelle sicher, dass die Variable für den Python-Pfad wie folgt definiert ist (relativ zum Projekt):
-```vba
-strPythonExe = ThisWorkbook.Path & "\.venv\Scripts\python.exe"
-```
 
 ## 🚀 Nutzung
