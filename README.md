@@ -77,26 +77,32 @@ git clone [https://github.com/DEIN_USERNAME/Finanz_OS.git](https://github.com/DE
 cd Finanz_OS# Finanz_OS
 ```
 
-### 2. Python-Umgebung einrichten
-```bash
-# 1. Virtuelle Umgebung erstellen
-python -m venv .venv
+### 2. Vorraussetzungen installieren
+Öffne deinen Finanzen_OS Folder und doppelkliche die Datei:
+"INSTALL_MY_FINANCES.bat"
 
-# 2. Umgebung aktivieren
-# In der Git Bash oder auf Linux/Mac:
-source .venv/Scripts/activate
-# In der Windows Eingabeaufforderung (CMD):
-.venv\Scripts\activate.bat
+Folgendes wird basieren:
 
-# 3. Abhängigkeiten installieren
-pip install -r requirements.txt
-```
+-Python-Check: Das Skript prüft, ob Python auf deinem Rechner installiert ist.
+Falls nicht: Lädt es den offiziellen Python-Installer herunter und startet ihn für dich.
+
+-Umgebung (VENV): Es erstellt einen isolierten Ordner (.venv) innerhalb des Projektverzeichnisses. Das sorgt dafür, dass die Finanz-       Software keine anderen Programme auf deinem PC stört.
+
+-Abhängigkeiten: Alle benötigten Rechen-Module (wie Pandas für die Datenverarbeitung) werden automatisch in diese Umgebung geladen.
+
+-Infrastruktur: Fehlende Ordner für deine Bankdaten (input, output, archiv) werden angelegt, damit das Programm sofort startklar ist.
+
+-Desktop-Verknüpfung: Es wird automatisch ein Icon namens "Finanz-OS" auf deinem Desktop erstellt. Über dieses Icon kannst du ab sofort direkt deine Excel-Verwaltung starten, ohne jemals wieder in den Projektordner gehen zu müssen.
+
 
 ### 3. Excel-Datei vorbereiten
 - Öffne `Finanzen_Template.xlsm` in Excel.
 - Aktiviere Makros, wenn du dazu aufgefordert wirst.
 
 ## 🚀 Nutzung
+
+<img width="1683" height="894" alt="image" src="https://github.com/user-attachments/assets/3e642365-78d3-4347-bddf-fe611b18a33c" />
+
 
 ## 💳 Credits & Inspiration
 Dieses Projekt basiert auf der Grundidee und dem Excel-Template von **The Office Lab**. 
