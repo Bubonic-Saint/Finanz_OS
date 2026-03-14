@@ -74,7 +74,6 @@ Bisherige unterstützte Banken:
 ### 1. Repository klonen
 ```bash
 git clone https://github.com/Bubonic-Saint/Finanz_OS.git
-cd Finanz_OS# Finanz_OS
 ```
 
 ### 2. Vorraussetzungen installieren
