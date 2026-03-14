@@ -73,7 +73,7 @@ Bisherige unterstützte Banken:
 
 ### 1. Repository klonen
 ```bash
-git clone [https://github.com/DEIN_USERNAME/Finanz_OS.git](https://github.com/DEIN_USERNAME/Finanz_OS.git)
+git clone [[https://github.com/DEIN_USERNAME/Finanz_OS.git](https://github.com/DEIN_USERNAME/Finanz_OS.git)](https://github.com/Bubonic-Saint/Finanz_OS.git)
 cd Finanz_OS# Finanz_OS
 ```
 
