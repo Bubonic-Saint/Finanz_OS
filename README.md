@@ -35,7 +35,9 @@ Finanzen_OS/
 │   ├── output/               # Schnittstelle (Ready-to-Excel)
 │   ├── rules/                # Konfiguration (bank.json & template.json)
 │   └── archiv/               # Getrenntes Archiv pro Bank-Typ
-└── requirements.txt          # Python-Abhängigkeiten (Pandas, psutil)
+├── requirements.txt          # Python-Abhängigkeiten (Pandas, psutil)
+└── INSTALL_MY_FINANCES.bat   # Installations File
+
 ```
 ## JSON-Konfiguration
 **bank.json**: Definiert die Struktur der Bank-CSV (Spaltennamen, Trennzeichen, etc.) für die Extraktion.
