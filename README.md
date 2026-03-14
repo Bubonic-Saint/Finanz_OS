@@ -97,3 +97,11 @@ pip install -r requirements.txt
 - Aktiviere Makros, wenn du dazu aufgefordert wirst.
 
 ## 🚀 Nutzung
+
+## 💳 Credits & Inspiration
+Dieses Projekt basiert auf der Grundidee und dem Excel-Template von **The Office Lab**. 
+Das ursprüngliche Konzept wurden in diesem Video vorgestellt:
+- 📺 [
+How to create Ultimate Personal Budget in Excel](https://youtu.be/eKyAOjH3Crk?list=PL0tDTM2-szCFA1b_mNM5rOzTQK82WKBvM)
+
+Vielen Dank für die großartige Vorlage!
